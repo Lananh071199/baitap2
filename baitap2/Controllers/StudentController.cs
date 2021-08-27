@@ -15,7 +15,15 @@ namespace baitap2.Controllers
         }
         public ActionResult GetInfo()
         {
-            return 
+            return View();
+        }
+        [HttpPost]
+        public ActionResult GetInfo(string HoTenSv, string Tuoi, string Lop)
+        {
+            ViewBag.ten = HoTenSv;
+            ViewBag.Tuoi = Tuoi;
+            ViewBag.Lop = Lop;
+            return View();
         }
 
     }
